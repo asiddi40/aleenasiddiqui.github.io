@@ -74,7 +74,7 @@ Description: Homework 2 HTML Form
         id="fname" 
         maxlength="30" 
         required 
-        title="Please enter your first name" 
+        title="Letters, apostrophes and dashes only" 
         pattern="[a-zA-Z']{1,30}
         onblur="validatefname()"
         placeholder="Aleena" 
@@ -97,7 +97,7 @@ Description: Homework 2 HTML Form
         name="mini" 
         id="mini" 
         maxlength="1" 
-        title="Letter's only"
+        title="letters only, no numbers, blank/null ok"
         pattern="[a-zA-Z']{0,1}
         onblur="validatemini()"
         /> 
@@ -119,7 +119,7 @@ Description: Homework 2 HTML Form
         id="lname" 
         maxlength="30" 
         required 
-        title="Please enter your last name"
+        title="Letters, apostrophes, numbers 2 to 5, ie, the 3rd, and dashes only"
         pattern="[a-zA-Z']{1,30}
         onblur="validatelname()"
         placeholder="Siddiqui" 
@@ -194,9 +194,13 @@ Description: Homework 2 HTML Form
         name="ssn" 
         id="ssn" 
         required 
-        title="Please enter your social security number" 
+        title="Numbers only" 
         placeholder="123-45-6789" 
+        onblur="validatessn()"
         /> 
+      </br>
+    <span class="error" id="ssn-error">
+    </span>
     </td> 
     </tr> 
     
@@ -226,7 +230,12 @@ Description: Homework 2 HTML Form
             required 
             title="Please enter your email address" 
             placeholder="name@domain.tld" 
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
+            onblur="validateemail()"
             />
+         </br>
+    <span class="error" id="email-error">
+    </span>
         </td> 
     </tr> 
     
@@ -245,7 +254,11 @@ Description: Homework 2 HTML Form
             required 
             title="Please enter your phone number" 
             placeholder="123-45-6789" 
+            onblur="validatephone()"
             />
+         </br>
+    <span class="error" id="phone-error">
+    </span>
         </td> 
     </tr> 
     
@@ -261,10 +274,15 @@ Description: Homework 2 HTML Form
             name="address1" 
             id="address1" 
             maxlength="30" 
+            minlength="2"
             required 
             title="Please enter your address" 
             placeholder="1234 Little Town Rd." 
+            onblur="validateaddress1()"
             /> 
+         </br>
+    <span class="error" id="address1-error">
+    </span>
         </td> 
     </tr> 
     
@@ -280,6 +298,7 @@ Description: Homework 2 HTML Form
             name="address2" 
             id="address2" 
             maxlength="30" 
+            minlength="2"
             title="Please enter your address" 
             placeholder="1234 Little Town Rd." 
             /> 
@@ -298,6 +317,7 @@ Description: Homework 2 HTML Form
             name="city" 
             id="city" 
             maxlength="30" 
+            minlenght="2"
             required 
             title="Please enter your city" 
             placeholder="Houston" 
@@ -438,9 +458,13 @@ Description: Homework 2 HTML Form
                 minlength="5" 
                 maxlength="10" 
                 required 
-                title="Please enter your zip code" 
+                title="Numbers only" 
                 placeholder="77004" 
+                pattern="[0-9{5}"
                 /> 
+             </br>
+    <span class="error" id="zcode-error">
+    </span>
             </td> 
     </tr> 
     
@@ -644,11 +668,16 @@ Description: Homework 2 HTML Form
         type="text" 
         name="uname" 
         id="uname" 
-        maxlength="15" 
+        maxlength="30"
+        minlength="5"
         required 
-        title="Please enter a username" 
-        placeholder="eyeclinic20" 
+        title="5 to 30 characters, no special characters allowed. just letters, numbers (as long as the first character is NOT a number), and an underscore or dash, and NO SPACES." 
+        placeholder="eyeclinic20"
+        onblur="validateuname()"
         /> 
+     </br>
+    <span class="error" id="uname-error">
+    </span>
     </td> 
     
     <td class="td1"> 
@@ -665,9 +694,15 @@ Description: Homework 2 HTML Form
         minlength="10" 
         maxlength="30" 
         required 
-        title="Please enter a password" 
+        title="Passwords must be at least 8 characters and no more than 30 characters long and contain at least 1 upper case letter, 1 number, and 1 special character." 
         placeholder="***************" 
+        onblur="validatepwrd()"
+        oninput="validatepwrd()"
+        onfocus="validatepwrd()"
         /> 
+     </br>
+    <span class="error" id="pwrd-error">
+    </span>
     </td> 
 </tr> 
 
@@ -688,7 +723,13 @@ Description: Homework 2 HTML Form
         required 
         title="Please enter re-enter password"
         placeholder="***************" 
+        onblur="confirmpwrd()"
+        oninput="confirmpwrd()"
+        onfocus="confirmpwrd()"
         /> 
+      </br>
+    <span class="error" id="pwrd-error">
+    </span>
     </td> 
 </tr> 
 
