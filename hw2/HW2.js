@@ -3,7 +3,7 @@
  Date created: 9/19/2025
  Date last edited: 9/26/2025
  Version: 1.0
- Description: Homework 1 JS 
+ Description: Homework 2 JS 
  */ 
 
 //dynamic date js code// 
