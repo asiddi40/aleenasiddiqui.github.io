@@ -75,7 +75,14 @@ Description: Homework 2 HTML Form
         maxlength="30" 
         required 
         title="Please enter your first name" 
-        placeholder="Aleena" /> 
+        pattern="[a-zA-Z']{1,30}
+        onblur="validatefname()"
+        placeholder="Aleena" 
+     /> 
+
+    </br>
+    <span class="error" id="fname-error">
+    </span>
     </td> 
     
     <td class="td1"> 
@@ -90,8 +97,14 @@ Description: Homework 2 HTML Form
         name="mini" 
         id="mini" 
         maxlength="1" 
-        title="Please enter your middle initial if applicable" /> 
-    </td> 
+        title="Please enter your middle initial if applicable"
+        pattern="[a-zA-Z']{0,1}
+        onblur="validatemini()"
+        /> 
+
+     </br>
+    <span class="error" id="mini-error">
+    </span>
 
     <td class="td1"> 
         <label for="lname">Last Name: 
@@ -106,8 +119,14 @@ Description: Homework 2 HTML Form
         id="lname" 
         maxlength="30" 
         required 
-        title="Please enter your last name" 
-        placeholder="Siddiqui" /> 
+        title="Please enter your last name"
+        pattern="[a-zA-Z']{1,30}
+        onblur="validatelname()"
+        placeholder="Siddiqui" 
+     /> 
+    </br>
+    <span class="error" id="lname-error">
+    </span>
     </td> 
     </tr> 
     
@@ -152,8 +171,12 @@ Description: Homework 2 HTML Form
             type="date" 
             id="dob" 
             name="dob" 
+            onblur="validatedob()"
             required 
             /> 
+         </br>
+    <span class="error" id="dob-error">
+    </span>
         </td> 
     </tr>
     
