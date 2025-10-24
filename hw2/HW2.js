@@ -97,22 +97,22 @@ function validatezcode() {
   return true;
 }
 
-// -- Email Address Validation Code --
-function validateemail() {
-  email = document.getElementById("email").value;
-  var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; //regex pattern for email
+// --- Email Address Validation Code ---
+function validateEmail() {
+  const email = document.getElementById("email").value.trim();
+  const emailError = document.getElementById("email-error");
 
-  if (email =="") {
-    document.getElementById("email-error").innerHTML =
-      "Email must be entered.";
+  // Regex pattern for a valid email
+  const emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  if (email === "") {
+    emailError.innerHTML = "Email must be entered.";
     return false;
-  } else if (!email.match(emailR)) {
-    document.getElementById("email-error").innerHTML = 
-      "Please enter a valid Email Address.";
+  } else if (!emailR.test(email)) {
+    emailError.innerHTML = "Please enter a valid Email Address.";
     return false;
   } else {
-    document.getElementById("email-error").innerHTML =
-      "";
-    return true; 
+    emailError.innerHTML = "";
+    return true;
   }
 }
