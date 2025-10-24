@@ -75,3 +75,8 @@ function validateaddress1() {
     return true;
   }
 }
+
+// --- Zip Code Validation Code ---
+function validatezcode() {
+    
+}
