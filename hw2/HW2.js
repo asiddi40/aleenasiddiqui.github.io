@@ -96,3 +96,23 @@ function validatezcode() {
     "";
   return true;
 }
+
+// -- Email Address Validation Code --
+function validateemail() {
+  email = document.getElementById("email").value;
+  var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; //regex pattern for email
+
+  if (email =="") {
+    document.getElementById("email-error").innerHTML =
+      "Email must be entered.";
+    return false;
+  } else if (!email.match(emailR)) {
+    document.getElementById("email-error").innerHTML = 
+      "Please enter a valid Email Address.";
+    return false;
+  } else {
+    document.getElementById("email-error").innerHTML =
+      "";
+    return true; 
+  }
+}
