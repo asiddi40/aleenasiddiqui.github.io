@@ -146,7 +146,7 @@ function validateuname() {
   document.getElementById("unname").value = uname;
 
   if (uname.length == 0) {
-      document.getElementById("uname").innerHTML =
+      document.getElementById("uname-error").innerHTML =
         "Username must be entered";
     return false;
   } 
