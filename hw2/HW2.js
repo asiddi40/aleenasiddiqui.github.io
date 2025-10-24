@@ -123,7 +123,7 @@ function validatephone() {
    const phone = phoneInput.value.replace(/\D/g, ""); // removes all non-number characters
 
   if (phone.length !== 10) {
-    document.getElementById("error-phone").innerHTML = 
+    document.getElementById("phone-error").innerHTML = 
       "Phone Number must be entered.";
     return false;
   } 
