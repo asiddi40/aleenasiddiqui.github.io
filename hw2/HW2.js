@@ -99,23 +99,26 @@ function validatezcode() {
 
 // --- Email Address Validation Code ---
 function validateemail() {
-  const email = document.getElementById("email").value.trim();
-  const emailError = document.getElementById("email-error");
+  email = document.getElementById("email").value;
+  var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // Regex pattern for a valid email
 
-  // Regex pattern for a valid email
-  const emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-  if (email === "") {
-    emailError.innerHTML = "Email must be entered.";
+  if (email == "") {
+    document.getElementById("email-error").innerHTML = 
+      "Email must be entered.";
     return false;
-  } else if (!emailR.test(email)) {
-    emailError.innerHTML = "Please enter a valid Email Address.";
+  } else if (!email.match(emailR)) {
+    document.getElementById("email-error").innerHTML = 
+      "Please enter a valid Email Address.";
     return false;
   } else {
-    emailError.innerHTML = "";
+    docment.getElementById("email-error").innerHTML = 
+      "";
     return true;
   }
 }
 
 // -- Phone Number Validation Code --
-function validate
+function validatephone() {
+
+}
+
