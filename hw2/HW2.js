@@ -98,7 +98,7 @@ function validatezcode() {
 }
 
 // --- Email Address Validation Code ---
-function validateEmail() {
+function validateemail() {
   const email = document.getElementById("email").value.trim();
   const emailError = document.getElementById("email-error");
 
