@@ -77,6 +77,22 @@ function validateaddress1() {
 }
 
 // --- Zip Code Validation Code ---
-function validatezcode() {
-    
+function validatezcode() { 
+   const zipInput = document.getElementById("zcode");
+   let zip = zipInput.value.replace(/[^\d-]/g, "") //removes non-number and non-dash characters
+
+  if (!zip) {
+    document.getElementById("zcode-error").innerHTML =
+      "Zip Code must be entered.";
+    return false;
+  } 
+
+  if (zip.length > 5) {
+    zip = zip.slice(0,5); //removes all digits after first 5
+  }
+
+  zipInput.value = zip;
+  document.getElementById("zcode-error").innerHTML =
+    "";
+  return true;
 }
