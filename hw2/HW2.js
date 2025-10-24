@@ -116,3 +116,6 @@ function validateemail() {
     return true;
   }
 }
+
+// -- Phone Number Validation Code --
+function validate
