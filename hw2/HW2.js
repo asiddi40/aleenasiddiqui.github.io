@@ -119,7 +119,7 @@ function validateemail() {
 
 // -- Phone Number Validation Code --
 function validatephone() {
-   const phoneInput = document.getElementById("phone-error");
+   const phoneInput = document.getElementById("phone");
    const phone = phoneInput.value.replace(/\D/g, ""); // removes all non-number characters
 
   if (phone.length !== 10) {
