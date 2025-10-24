@@ -37,7 +37,7 @@ dob=document.getElementById("dob");
  } else {
    document.getElementId("dob-error").innerHTML =
    "";
-  return true
+  return true;
  }
 }
 
@@ -59,4 +59,19 @@ function validatessn() {
  }
 }
 
-function validate
+// address validation js code
+function validateaddress1() {
+   var ad1 = document.getElementId("address1").value;
+ console.log(ad1);
+ console.log(ad1.length);
+
+ if (ad1.length < 2) {
+    document.getElementId("address1-error".innerHTML =
+    "Please enter Address Line.";
+  return false;
+ } else {
+    document.getElementId("address1-error").innerHTML =
+    "";
+  return true;
+ }
+}
