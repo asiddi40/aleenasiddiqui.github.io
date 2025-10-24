@@ -119,6 +119,19 @@ function validateemail() {
 
 // -- Phone Number Validation Code --
 function validatephone() {
+   const phoneInput = document.getElementById("phone-error");
+   const phone = phoneInput.value.replace(/\D/g, ""); // removes all non-number characters
 
+  if (phone.length !== 10) {
+    document.getElementById("error-phone").innerHTML = 
+      "Phone Number must be entered.";
+    return false;
+  } 
+
+  const formattedphone = phone.slice(0,3) + "-" + phone.slice(3,6) + "-" + phone.slice(6)
+  phoneInput.value = formattedphone;
+  document.getElementById("phone-error").innerHTML =
+    "";
+  return true;
 }
 
