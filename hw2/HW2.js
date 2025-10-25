@@ -116,13 +116,13 @@ function validatephone() {
   const phoneInput = document.getElementById("phone");
   const phone = phoneInput.value.replace(/\D/g, ""); // removes all non-number characters
 
-  if (phone.length !== 10) {
+  if (phone.length == 0) {
     document.getElementById("phone-error").innerHTML = 
       "Phone Number must be entered.";
     return false;
   } 
 
-  const formattedphone = phone.slice(0,3) + "-" + phone.slice(3,6) + "-" + phone.slice(6);
+  const formattedphone = phone.slice(0,3) + "-" + phone.slice(3,6) + "-" + phone.slice(6,10);
   phoneInput.value = formattedphone;
   document.getElementById("phone-error").innerHTML = "";
   return true;
