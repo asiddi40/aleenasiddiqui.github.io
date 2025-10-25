@@ -178,5 +178,43 @@ function validateuname() {
         return true;
     }
 }
- 
+
+// -- Password Validation Code --
+function validatepwrd() {
+    const pwrd = document.getElementById("pwrd").value;
+    const uname = document.getElementById("uname").value;
+
+  //sets up initiatives array
+  const errorMessage = [];
+
+  //check for lowercase letters
+  if (!pwrd.match(/[a-z]/)) {
+      errorMessage.push("Enter at least one lowercase letter.");
+  }
   
+//check for uppercase letters
+  if (!pwrd.match(/[A-Z]/)) {
+      errorMessage.push("Enter at least one uppercase letter.");
+  }
+
+//check for numbers
+  if (!pwrd.match(/[0-9]/)) {
+      errorMessage.push("Enter at least one number.");
+  }
+
+//check for special characters
+  if (!pwrd.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
+      errorMessage.push("Enter at least one special character.");
+  }
+
+  //check for username not in password
+  if (pwrd == uname || pwrd.includes(uname)) {
+      errorMessage.push("Password cannnot contain username.");
+  }
+
+  //displays error messages if there are any
+  const errorContainer = document.querySelector(".pwrd-messsage");
+  errorContainer.innerHTML = errorMessage
+  .map(message) => '<span>{$message}</span><br/>')
+  .join("");
+}
