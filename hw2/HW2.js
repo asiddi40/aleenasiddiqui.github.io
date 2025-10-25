@@ -46,8 +46,6 @@ function validatedob() {
 // --- SSN Validation JS Code ---
 function validatessn() {
   const ssn = document.getElementById("ssn").value;
-
-  // Regex for SSN pattern
   const ssnR = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
 
   if (!ssnR.test(ssn)) {
@@ -63,8 +61,6 @@ function validatessn() {
 // --- Address Validation JS Code ---
 function validateaddress1() {
   var ad1 = document.getElementById("address1").value;
-  console.log(ad1);
-  console.log(ad1.length);
 
   if (ad1.length < 2) {
     document.getElementById("address1-error").innerHTML =
@@ -78,8 +74,8 @@ function validateaddress1() {
 
 // --- Zip Code Validation Code ---
 function validatezcode() { 
-   const zipInput = document.getElementById("zcode");
-   let zip = zipInput.value.replace(/[^\d-]/g, "") //removes non-number and non-dash characters
+  const zipInput = document.getElementById("zcode");
+  let zip = zipInput.value.replace(/[^\d-]/g, ""); // removes non-number and non-dash characters
 
   if (!zip) {
     document.getElementById("zcode-error").innerHTML =
@@ -88,21 +84,20 @@ function validatezcode() {
   } 
 
   if (zip.length > 5) {
-    zip = zip.slice(0,5); //removes all digits after first 5
+    zip = zip.slice(0,5); // keeps only first 5 digits
   }
 
   zipInput.value = zip;
-  document.getElementById("zcode-error").innerHTML =
-    "";
+  document.getElementById("zcode-error").innerHTML = "";
   return true;
 }
 
 // --- Email Address Validation Code ---
 function validateemail() {
-  email = document.getElementById("email").value;
-  var emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // Regex pattern for a valid email
+  const email = document.getElementById("email").value;
+  const emailR = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-  if (email == "") {
+  if (email === "") {
     document.getElementById("email-error").innerHTML = 
       "Email must be entered.";
     return false;
@@ -111,16 +106,15 @@ function validateemail() {
       "Please enter a valid Email Address.";
     return false;
   } else {
-    document.getElementById("email-error").innerHTML = 
-      "";
+    document.getElementById("email-error").innerHTML = "";
     return true;
   }
 }
 
 // -- Phone Number Validation Code --
 function validatephone() {
-   const phoneInput = document.getElementById("phone");
-   const phone = phoneInput.value.replace(/\D/g, ""); // removes all non-number characters
+  const phoneInput = document.getElementById("phone");
+  const phone = phoneInput.value.replace(/\D/g, ""); // removes all non-number characters
 
   if (phone.length !== 10) {
     document.getElementById("phone-error").innerHTML = 
@@ -128,93 +122,79 @@ function validatephone() {
     return false;
   } 
 
-  const formattedphone = phone.slice(0,3) + "-" + phone.slice(3,6) + "-" + phone.slice(6)
+  const formattedphone = phone.slice(0,3) + "-" + phone.slice(3,6) + "-" + phone.slice(6);
   phoneInput.value = formattedphone;
-  document.getElementById("phone-error").innerHTML =
-    "";
+  document.getElementById("phone-error").innerHTML = "";
   return true;
 }
 
 // -- Username Validation Code --
 function validateuname() {
-  uname = document.getElementById("uname").value;
+  let uname = document.getElementById("uname").value;
 
-  //converts username to lowercase
   uname = uname.toLowerCase();
-
-  //display username in lowercase
   document.getElementById("uname").value = uname;
 
-  if (uname.length == 0) {
-      document.getElementById("uname-error").innerHTML =
-        "Username must be entered";
+  if (uname.length === 0) {
+    document.getElementById("uname-error").innerHTML =
+      "Username must be entered";
     return false;
   } 
-  
-   //checks username doesn't start with a number
+
   if (!isNaN(uname.charAt(0))) {
     document.getElementById("uname-error").innerHTML =
       "Username cannot start with a number";
     return false;
-    
-  //checks username consists of only letters, numbers, or underscores
+  }
+
   let regex = /^[a-zA-Z0-9_-]+$/;
-    if (!regex.test(uname)) {
-        document.getElementById("uname-error").innerHTML = 
-        "User ID can only have letters, numbers, underscores, and dashes";
-        return false;
-      //checks username has at least 5 characters
-    } else if (uname.length < 5) {
-        document.getElementById("uname-error").innerHTML = 
-        "User ID must be at least 5 characters";
-        return false;
-      //checks username doesn't exceed 30 characters
-    } else if (uname.length > 30) {
-        document.getElementById("uname-error").innerHTML = 
-        "Username can't exceed 30 characters";
-        return false;
-    } else {
-        document.getElementById("uname-error").innerHTML = "";
-        return true;
-    }
+  if (!regex.test(uname)) {
+    document.getElementById("uname-error").innerHTML = 
+      "User ID can only have letters, numbers, underscores, and dashes";
+    return false;
+  } else if (uname.length < 5) {
+    document.getElementById("uname-error").innerHTML = 
+      "User ID must be at least 5 characters";
+    return false;
+  } else if (uname.length > 30) {
+    document.getElementById("uname-error").innerHTML = 
+      "Username can't exceed 30 characters";
+    return false;
+  } else {
+    document.getElementById("uname-error").innerHTML = "";
+    return true;
+  }
 }
 
 // -- Password Validation Code --
 function validatepwrd() {
-    const pwrd = document.getElementById("pwrd").value;
-    const uname = document.getElementById("uname").value;
+  const pwrd = document.getElementById("pwrd").value;
+  const uname = document.getElementById("uname").value;
 
-  //sets up initiatives array
   const errorMessage = [];
 
-  //check for lowercase letters
   if (!pwrd.match(/[a-z]/)) {
-      errorMessage.push("Enter at least one lowercase letter.");
+    errorMessage.push("Enter at least one lowercase letter.");
   }
-  
-//check for uppercase letters
+
   if (!pwrd.match(/[A-Z]/)) {
-      errorMessage.push("Enter at least one uppercase letter.");
+    errorMessage.push("Enter at least one uppercase letter.");
   }
 
-//check for numbers
   if (!pwrd.match(/[0-9]/)) {
-      errorMessage.push("Enter at least one number.");
+    errorMessage.push("Enter at least one number.");
   }
 
-//check for special characters
   if (!pwrd.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
-      errorMessage.push("Enter at least one special character.");
+    errorMessage.push("Enter at least one special character.");
   }
 
-  //check for username not in password
-  if (pwrd == uname || pwrd.includes(uname)) {
-      errorMessage.push("Password cannnot contain username.");
+  if (pwrd === uname || pwrd.includes(uname)) {
+    errorMessage.push("Password cannot contain username.");
   }
 
-  //displays error messages if there are any
   const errorContainer = document.querySelector(".pwrd-messsage");
   errorContainer.innerHTML = errorMessage
-  .map(message) => '<span>{$message}</span><br/>')
-  .join("");
+    .map(message => `<span>${message}</span><br/>`)
+    .join("");
 }
