@@ -97,3 +97,45 @@ p {
     font-family: "optima", sans-serif; 
     font-weight: normal; 
     }
+
+.error {
+    color: red;
+    font-size: 15;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
+}
+
+.pword-message {
+    text-align: right;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
+    position: relative;
+    left: 100px;
+    background: transparent;
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;
+    color: red;
+}
+
+#review {
+    margin-top: 5px;
+}
+
+table.output,
+tr.output,
+td.output {
+    width: 500px;
+    background-color: rgb(148, 169, 190);
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;
+    color: white;
+}
+
+td.output {
+    width: 500px;
+    background-color: rgb(148, 169, 190);
+    padding: 10px;
+    border-spacing: 2px;
+}
