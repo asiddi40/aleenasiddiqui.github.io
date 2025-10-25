@@ -195,6 +195,6 @@ function validatepwrd() {
 
   const errorContainer = document.querySelector(".pwrd-message");
    errorContainer.innerHTML = errorMessage
-    .map(message => `<span>${message}</span><br/>`)
-    .join("");
+  .map(message => `<span>${message}</span><br/>`)
+  .join("");
 }
