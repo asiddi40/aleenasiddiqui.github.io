@@ -111,7 +111,7 @@ function validateemail() {
       "Please enter a valid Email Address.";
     return false;
   } else {
-    docment.getElementById("email-error").innerHTML = 
+    document.getElementById("email-error").innerHTML = 
       "";
     return true;
   }
@@ -143,7 +143,7 @@ function validateuname() {
   uname = uname.toLowerCase();
 
   //display username in lowercase
-  document.getElementById("unname").value = uname;
+  document.getElementById("uname").value = uname;
 
   if (uname.length == 0) {
       document.getElementById("uname-error").innerHTML =
@@ -151,5 +151,32 @@ function validateuname() {
     return false;
   } 
   
+   //checks username doesn't start with a number
+  if (!isNaN(uname.charAt(0))) {
+    document.getElementById("uname-error").innerHTML =
+      "Username cannot start with a number";
+    return false;
+    
+  //checks username consists of only letters, numbers, or underscores
+  let regex = /^[a-zA-Z0-9_-]+$/;
+    if (!regex.test(uname)) {
+        document.getElementById("uname-error").innerHTML = 
+        "User ID can only have letters, numbers, underscores, and dashes";
+        return false;
+      //checks username has at least 5 characters
+    } else if (uname.length < 5) {
+        document.getElementById("uname-error").innerHTML = 
+        "User ID must be at least 5 characters";
+        return false;
+      //checks username doesn't exceed 30 characters
+    } else if (uname.length > 30) {
+        document.getElementById("uname-error").innerHTML = 
+        "Username can't exceed 30 characters";
+        return false;
+    } else {
+        document.getElementById("uname-error").innerHTML = "";
+        return true;
+    }
+}
  
   
