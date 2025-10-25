@@ -193,7 +193,7 @@ function validatepwrd() {
     errorMessage.push("Password cannot contain username.");
   }
 
-  const errorContainer = document.querySelector(".pwrd-messsage");
+  const errorContainer = document.querySelector(".pwrd-message");
   errorContainer.innerHTML = errorMessage
     .map(message => `<span>${message}</span><br/>`)
     .join("");
