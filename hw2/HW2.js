@@ -202,7 +202,7 @@ function validatepwrd() {
 // -- Confirm Password Validation --
 function confirmpwrd() {
     pword1 = document.getElementById("pwrd").value;
-    pword2 = document.getElementById("confirmpwrd").value;
+    pword2 = document.getElementById("conpwrd").value;
 
     if (pword1 !== pword2) {
         document.getElementById("pwrd2-error").innerHTML = 
