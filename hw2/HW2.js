@@ -137,7 +137,7 @@ function validatephone() {
 
 // -- Username Validation Code --
 function validateuname() {
-  uname - document.getElementById("uname").value;
+  uname = document.getElementById("uname").value;
 
   //converts username to lowercase
   uname = uname.toLowerCase();
