@@ -198,3 +198,19 @@ function validatepwrd() {
   .map(message => `<span>${message}</span><br/>`)
   .join("");
 }
+
+// -- Confirm Password Validation --
+function confirmpwrd() {
+    pword1 = document.getElementById("pwrd").value;
+    pword2 = document.getElementById("confirmpwrd").value;
+
+    if (pword1 !== pword2) {
+        document.getElementById("pwrd2-error").innerHTML = 
+        "Passwords don't match.";
+        return false;
+    } else {
+        document.getElementById("pwrd2-error").innerHTML = 
+        "Passwords match.";
+        return true;
+    }
+}
