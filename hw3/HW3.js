@@ -20,8 +20,75 @@ slider.oninput = function () {
   output.innerHTML = this.value;
 };
 
-// --- First Name Validation JS Code --
-function validatefname
+// --- First Name Validation JS Code ---
+function validatefname() {
+fname = document.getElementById("fname").value.trim();
+var namePattern = /^[a-zA-Z'-]+$/;
+// --- Checks If First Name Field Is Empty ---
+  if (fname == "") {
+        document.getElementById("fname-error").innerHTML = "First name field cannot be empty"
+        return false;
+    } else if (fname != "") {
+        if (!fname.match(namePattern)) { // --- Checks If First Name Matches Pattern ---
+        document.getElementById("fname-error").innerHTML = "Letters, apostrophes, and dashes only.";
+        return false;
+    } else if (fname.length < 2) { // --- Checks If First Name Is At Least 1 Character ---
+        document.getElementById("fname-error").innerHTML = "First name cannot be less than 2 characters.";
+        return false;
+    } else if (fname.length > 30) { // --- Checks If First Name Is More Than 30 Characters ---
+        document.getElementById("fname-error").innerHTML = "First name cannot be more than 30 characters.";
+        return false;
+    } else {
+        document.getElementById("fname-error").innerHTML = "";
+        return true;
+    }
+}
+}
+
+// --- Middle Initial Validation JS Code ---
+function validatemini() {
+    mini = document.getElementById("mini").value;
+    var namePattern = /^[A-Z]+$/;
+// --- Makes Middle Initial UpperCase ---
+    mini = mini.toUpperCase();
+    document.getElementById("mini").value = mini;
+// --- Checks If Middle Initial Is One Character ---
+  if (mini.length > 1) {
+    document.getElementById("mini-error").innerHTML = "Middle initial cannot have more than one character.";
+    return false;
+  } else if (!mini.match(namePattern)) { // --- Checks If Middle Initial Matches Pattern ---
+        document.getElementById("mini-error").innerHTML = "Letters only.";
+        return false;
+    } else {
+        document.getElementById("mini-error").innerHTML = "";
+        return true;
+    }
+}
+
+// --- Last Name Validation JS Code ---
+function validatelname() {
+lname = document.getElementById("lname").value.trim();
+var namePattern = /^[a-zA-Z'-]+$/;
+// --- Checks If Last Name Field Is Empty ---
+  if (lname == "") {
+        document.getElementById("lname-error").innerHTML = "Last name field cannot be empty"
+        return false;
+    } else if (lname != "") {
+        if (!lname.match(namePattern)) { // --- Checks If Last Name Matches Pattern ---
+        document.getElementById("lname-error").innerHTML = "Letters, apostrophes, and dashes only.";
+        return false;
+    } else if (lname.length < 2) { // --- Checks If Last Name Is At Least 1 Character ---
+        document.getElementById("lname-error").innerHTML = "Last name cannot be less than 2 characters.";
+        return false;
+    } else if (lname.length > 30) { // --- Checks If Last Name Is More Than 30 Characters ---
+        document.getElementById("lname-error").innerHTML = "Last name cannot be more than 30 characters.";
+        return false;
+    } else {
+        document.getElementById("lname-error").innerHTML = "";
+        return true;
+    }
+}
+}
 
 // --- DOB Validation JS Code ---
 function validatedob() {
