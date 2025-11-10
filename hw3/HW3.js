@@ -20,6 +20,9 @@ slider.oninput = function () {
   output.innerHTML = this.value;
 };
 
+// --- First Name Validation JS Code --
+function validatefname
+
 // --- DOB Validation JS Code ---
 function validatedob() {
   let dob = document.getElementById("dob");
