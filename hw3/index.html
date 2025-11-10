@@ -321,6 +321,7 @@ Description: Homework 3 HTML Form
             required 
             title="Please enter your city" 
             placeholder="Houston" 
+            onblur="validatecity()"
             /> 
         </td> 
         
@@ -758,6 +759,15 @@ Description: Homework 3 HTML Form
             value="Review"
             style="font-family: 'optima', sans-serif;"
             onclick="reviewInput()"> 
+            &nbsp;&nbsp;&nbsp;
+
+            <input 
+            type="button" 
+            name="Validate" 
+            id="Validate" 
+            value="Validate"
+            style="font-family: 'optima', sans-serif;"
+            onclick="validateEverything()"> 
         </center> 
     </td> 
 </tr> 
@@ -808,5 +818,16 @@ Description: Homework 3 HTML Form
 </footer> 
 
 <script src="HW3.js"></script>
+
+<!-- inserts alert boxes into form when necessary -->
+<div id="alert-box">
+    <div id="alert-content">
+        <h4>Please fill out all required information.
+        </h4>
+        <button id="close-alert">OK
+        </button>
+    </div>
+</div>
+                
 </body> 
 </html> 
