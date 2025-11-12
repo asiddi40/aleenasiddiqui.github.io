@@ -142,6 +142,19 @@ function validateaddress1() {
   }
 }
 
+// --- City Validation JS Code ---
+function validationcity() {
+city = document.getElementById("city").value.trim();
+
+    if (!city) {
+        document.getElementById("city-error").innerHTML = "City can't be blank";
+        return false;
+    } else {
+        document.getElementById("city-error").innerHTML = "";
+        return true;
+    }
+}
+
 // --- Zip Code Validation Code ---
 function validatezcode() { 
   const zipInput = document.getElementById("zcode");
