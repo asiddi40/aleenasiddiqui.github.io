@@ -328,3 +328,6 @@ function reviewInput() {
 function removeReview() {
     document.getElementById("showInput").innerHTML = "";
 }
+
+// ---- Shows Alert Box When Necessary JS Code ----
+function show
