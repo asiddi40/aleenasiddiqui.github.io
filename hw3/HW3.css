@@ -152,9 +152,6 @@ td.outputdata {
  height: 100%;
  overflow: auto;
  background-color: rgb(148, 169, 190);
- display: flex;
- justify-content: center;
- align-items: center;
 }
 
 #alert-content {
