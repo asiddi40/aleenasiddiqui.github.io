@@ -344,43 +344,43 @@ function showAlert() {
 function validateEverything() {
     let valid = true;
 
-    if (!validateFname()) {
+    if (!validatefname()) {
         valid = false;
     }
-    if (!validateMini()) {
+    if (!validatemini()) {
         valid = false;
     }
-    if (!validateLname()) {
+    if (!validatelname()) {
         valid = false;
     }
-    if (!validateDob()) {
+    if (!validatedob()) {
         valid = false;
     }
-    if (!validateSsn()) {
+    if (!validatessn()) {
         valid = false;
     }
-    if (!validateAddress1()) {
+    if (!validateaddress1()) {
         valid = false;
     }
-    if (!validateCity()) {
+    if (!validatecity()) {
         valid = false;
     }
-    if (!validateZcode()) {
+    if (!validatezcode()) {
         valid = false;
     }
-    if (!validateEmail()) {
+    if (!validateemail()) {
         valid = false;
     }
-    if (!validatePhone()) {
+    if (!validatephone()) {
         valid = false;
     }
-    if (!validateUid()) {
+    if (!validateuname()) {
         valid = false;
     }
-    if (!validatePword()) {
+    if (!validatepwrd()) {
         valid = false;
     }
-    if (!confirmPword()) {
+    if (!confirmpwrd()) {
         valid = false;
     }
      if (valid) {
