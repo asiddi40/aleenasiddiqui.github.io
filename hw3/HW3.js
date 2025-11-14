@@ -280,6 +280,8 @@ function validatepwrd() {
    errorContainer.innerHTML = errorMessage
   .map(message => `<span>${message}</span><br/>`)
   .join("");
+
+  return errorMessage.length === 0;
 }
 
 // -- Confirm Password Validation --
