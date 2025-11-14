@@ -143,7 +143,7 @@ function validateaddress1() {
 }
 
 // --- City Validation JS Code ---
-function validationcity() {
+function validatecity() {
 city = document.getElementById("city").value.trim();
 
     if (!city) {
