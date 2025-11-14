@@ -25,7 +25,6 @@ form {
      flex-grow: 1; 
      width: 600px;
      margin: 0 auto;
-     min-width: 600px;
     } 
     
 h1, h2 { 
