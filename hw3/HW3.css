@@ -22,7 +22,9 @@ body{
     } 
     
 form { 
-    flex-grow: 1; 
+     flex-grow: 1; 
+     width: 600px;
+     margin: 0 auto;
     } 
     
 h1, h2 { 
