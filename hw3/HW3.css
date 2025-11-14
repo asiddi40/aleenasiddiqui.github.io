@@ -106,15 +106,14 @@ p {
 }
 
 .pwrd-message {
-    display: block;
-    text-align: center;
-    width: 100%;
+    min-height: 20px;
+    font-size: 15px;
     font-family: "optima", sans-serif;
     font-weight: normal;
-    background: transparent;
-    padding: 5px 0 5px 15px;;
-    border-radius: 20px;
     color: red;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 20px;
 }
 
 #review {
