@@ -112,7 +112,7 @@ p {
     font-family: "optima", sans-serif;
     font-weight: normal;
     background: transparent;
-    padding: 5px 0;
+    padding: 5px 0 5px 15px;;
     border-radius: 20px;
     color: red;
 }
