@@ -52,8 +52,12 @@ function validatemini() {
 // --- Makes Middle Initial UpperCase ---
     mini = mini.toUpperCase();
     document.getElementById("mini").value = mini;
-// --- Checks If Middle Initial Is One Character ---
-  if (mini.length > 1) {
+// --- If No Middle Initial ---
+  if (mini.length === 0) {
+    document.getElementById("mini-error").innerHTML = "";
+    return true; 
+    // --- Checks If Middle Initial Is One Character ---
+  } else if (mini.length > 1) {
     document.getElementById("mini-error").innerHTML = "Middle initial cannot have more than one character.";
     return false;
   } else if (!mini.match(namePattern)) { // --- Checks If Middle Initial Matches Pattern ---
