@@ -105,6 +105,10 @@ p {
     font-size: 15px;
     font-family: "optima", sans-serif;
     font-weight: normal;
+    min-width: 250px;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .pwrd-message {
@@ -116,6 +120,10 @@ p {
     text-align: center;
     padding: 5px 10px;
     border-radius: 20px;
+    min-width: 250px;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
 }
 
 #review {
