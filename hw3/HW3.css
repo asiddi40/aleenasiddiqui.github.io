@@ -172,6 +172,21 @@ td.outputdata {
  font-weight: normal;  
 }
 
-#close-alert {
- 
+ #close-alert {
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    color: rgb(148, 169, 190);
+    border-color: rgb(148, 169, 190);
+    font-size: 15px;
+    font-weight: bold;
+    height: 20px;
+    width: 80px;
+    border-radius: 20px;
+    cursor: pointer;
+  
+    margin-top: 20px;
+    text-align: center;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
 }
