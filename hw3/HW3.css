@@ -99,13 +99,13 @@ p {
     }
 
 .error {
-    min-height: 20px;
+    display: block;
     margin-top: 5px;
     color: red;
     font-size: 15px;
     font-family: "optima", sans-serif;
     font-weight: normal;
-    min-width: 250px;
+    
 }
 
 .pwrd-message {
