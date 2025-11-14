@@ -18,7 +18,7 @@ body{
     background-color: rgb(189, 212, 234); 
     margin: 0; 
     height: 100%; 
-    min-height: 100wh
+    min-height: 100vh
     } 
     
 form { 
@@ -101,7 +101,7 @@ p {
 
 .error {
     color: red;
-    font-size: 15;
+    font-size: 15px;
     font-family: "optima", sans-serif;
     font-weight: normal;
 }
