@@ -93,7 +93,7 @@ textarea {
         } 
 
 p { 
-    text-align: right; 
+    text-align: left; 
     font-family: "optima", sans-serif; 
     font-weight: normal; 
     }
@@ -110,7 +110,7 @@ p {
     font-family: "optima", sans-serif;
     font-weight: normal;
     position: relative;
-    left: 10px;
+    left: 100px;
     background: transparent;
     padding: 10px;
     border-spacing: 2px;
