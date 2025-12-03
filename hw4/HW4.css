@@ -193,3 +193,22 @@ td.outputdata {
     font-family: "optima", sans-serif;
     font-weight: normal;
 }
+
+/* iframe styling */
+.iframe-container 
+{
+  position: absolute;
+  top: 15%;
+  right: 15px;
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.iframe-container iframe
+{
+  width: 95%;
+  height: 100%;
+  box-sizing: 1px solid black;
+}
