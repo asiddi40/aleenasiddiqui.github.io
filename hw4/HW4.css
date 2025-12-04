@@ -7,10 +7,18 @@
  */ 
  
  header { 
+    position: sticky;
+    top: 0;
     width: 100%; 
     background-color: rgb(148, 169, 190); 
+    transition: background-color 0.4 easy-in-out;
+    z-index: 1000;
     } 
 
+header.scrolled {
+  background-color: rgb(148, 169, 190); 
+  opacity: 1.0;
+}
 body{ 
     display: flex; 
     flex-direction: column; 
