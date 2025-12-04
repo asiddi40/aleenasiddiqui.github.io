@@ -395,3 +395,71 @@ function validateEverything() {
         showAlert();
      }
  }
+
+// Cookies For Remembering Information Input Form 
+function setCookie(name, cvalue, expiryDays) {
+    var day = new Date();
+    day.setTime(day.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + day.toUTCString();
+    document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+    var cookieName = name + "=";
+    var cookies = document.cookie.split(';');
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        while (cookie.charAt (0) == ' ' {
+          cookie = cookie.substring(1):
+        }
+        if (cookie.indexOf(cookieName) == 0) {
+            return cookie.substring(cookieName.length, cookie.length);
+        }
+    }
+    return " ";
+}
+
+var inputs = [
+  {id: "fname", cookieName: "firstName"},
+  {id: "mini", cookieName: "middleInitial"},
+  {id: "lname", cookieName: "lastName"},
+  {id: "dob", cookieName: "dob"},
+  {id: "ssn", cookieName: "ssn"},
+  {id: "address1", cookieName: "address1"},
+  {id: "ciy", cookieName: "city"},
+  {id: "zcode", cookieName: "zipCode"},
+  {id: "email", cookieName: "email"},
+  {id: "phone", cookieName: "phoneNumber"},
+  {id: "uanme", cookieName: "userName"},
+]
+
+inputs.forEach(function (input) {
+    var inputElement = document.getElementById(input.id);
+
+// Prefill Input Fields
+    var cookieValue = getCookie(input.cookieName);
+    if (cookieValue !== "") {
+        inputElement.value = cookieValue;
+    }
+
+// Set Cookie When Input Changes
+    inputElement.addEventListener("input", function () {
+        setCookie(input.cookieName, inputElement.value, 30);
+    });
+}); 
+
+// Greet User With Name And Cookie Message
+var firstName = getCookie("firstName");
+if (firstName !== "") {
+    document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br>";
+    document.getElementById("welcome2").innerHTML =
+        "<a href='#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
+
+    document.getElementById("new-user").addEventListener("click", function () {
+        inputs.forEach(function (input) {
+            setCookie(input.cookieName, "", -1);
+        });
+        location.reload();
+    });
+}
