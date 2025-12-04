@@ -11,13 +11,12 @@
     top: 0;
     width: 100%; 
     background-color: rgb(148, 169, 190); 
-    transition: background-color 0.4 ease-in-out;
+    transition: background-color 0.4s ease-in-out;
     z-index: 1000;
-    } 
+} 
 
 header.scrolled {
-  background-color: rgb(148, 169, 190);
-  opacity: 1.0;
+    background-color: rgba(148, 169, 190, 0.8);
 }
 
 body{ 
