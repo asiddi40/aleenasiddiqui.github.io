@@ -198,8 +198,7 @@ td.outputdata {
 .iframe-container {
     position: absolute;
     top: 250px;
-    right: 10px;
-    left: 30px
+    right: 5px;
     width: 250px;
     height: 150px;
 }
