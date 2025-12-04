@@ -196,14 +196,13 @@ td.outputdata {
 
 /* iframe styling */
 .iframe-container {
-  width: 80%;
-  height: 400px;
-  margin-top: 20px;
-  border: 1px solid black;
+    width: 100%;
+    height: 400px; 
+    margin-top: 20px;
 }
 
-.iframe-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+.frame {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
