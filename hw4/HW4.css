@@ -218,3 +218,19 @@ td.outputdata {
     border: 1px solid black;
     border-radius: 10px;
 }
+
+#welcome1 {
+ margin-top: 20%;
+ font-size: 20px;
+ text-align: center;
+ font-family: "optima", sans-serif; 
+ font-weight: normal;
+}
+
+#welcome2 {
+ margin-top: 20%;
+ font-size: 20px;
+ text-align: center;
+ font-family: "optima", sans-serif; 
+ font-weight: normal;
+}
