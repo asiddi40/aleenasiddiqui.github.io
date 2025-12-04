@@ -17,7 +17,7 @@
 
 header.scrolled {
   background-color: rgb(148, 169, 190); 
-  opacity: 1.0;
+  opacity: 5.0;
 }
 body{ 
     display: flex; 
