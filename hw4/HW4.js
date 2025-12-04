@@ -411,7 +411,7 @@ function getCookie(name) {
     for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].trim();
         while (cookie.charAt (0) == ' ') {
-          cookie = cookie.substring(1):
+          cookie = cookie.substring(1);
         }
         if (cookie.indexOf(cookieName) == 0) {
             return cookie.substring(cookieName.length, cookie.length);
@@ -427,11 +427,11 @@ var inputs = [
   {id: "dob", cookieName: "dob"},
   {id: "ssn", cookieName: "ssn"},
   {id: "address1", cookieName: "address1"},
-  {id: "ciy", cookieName: "city"},
+  {id: "city", cookieName: "city"},
   {id: "zcode", cookieName: "zipCode"},
   {id: "email", cookieName: "email"},
   {id: "phone", cookieName: "phoneNumber"},
-  {id: "uanme", cookieName: "userName"},
+  {id: "uname", cookieName: "userName"},
 ]
 
 inputs.forEach(function (input) {
