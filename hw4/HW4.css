@@ -200,8 +200,7 @@ td.outputdata {
     top: 10px;
     right: 10px;
     width: 250px;
-    height: 150px;
-    z-index: 999;
+    height: 100px;
 }
 
 .frame {
