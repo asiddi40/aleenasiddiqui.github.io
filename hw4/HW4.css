@@ -10,13 +10,14 @@
     position: sticky;
     top: 0;
     width: 100%; 
-    background-color: rgb(148, 169, 190); 
-    transition: background-color 0.4s ease-in-out;
+    background-color: rgba(148, 169, 190, 0.4); 
+    transition: background-color 0.4 easy-in-out;
     z-index: 1000;
 } 
 
 header.scrolled {
-    background-color: rgba(148, 169, 190, 0.8);
+   background-color: rgba(148, 169, 190, 0.4);
+   opacity: 1.0;
 }
 
 body{ 
